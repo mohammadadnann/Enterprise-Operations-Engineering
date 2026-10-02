@@ -1,0 +1,20 @@
+# Original data
+data/source/
+
+# Generated data
+data/simulated/
+data/messy/
+data/quarantine/
+
+# Logs
+logs/
+
+# Python
+__pycache__/
+*.pyc
+.DS_Store
+
+# Environment and secrets
+.env
+.venv/
+venv/
