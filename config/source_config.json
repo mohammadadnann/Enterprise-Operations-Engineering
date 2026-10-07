@@ -1,0 +1,43 @@
+{
+  "sales": {
+    "source_folder": "sales_api",
+    "source_type": "rest_api",
+    "formats": ["json"],
+    "exclude": ["SalesOrder_malformed.json"]
+  },
+  "procurement": {
+    "source_folder": "procurement_sftp",
+    "source_type": "sftp",
+    "files": [
+      "Supplier.xlsx",
+      "PurchaseOrder.csv",
+      "PurchaseOrderLine.csv",
+      "GoodsReceipt.xlsx",
+      "GoodsReceiptLine.csv",
+      "late_arrivals/GoodsReceiptLine_late.csv"
+    ]
+  },
+  "inventory": {
+    "source_folder": "inventory_s3",
+    "source_type": "s3",
+    "formats": ["parquet"]
+  },
+  "manufacturing": {
+    "source_folder": "manufacturing_db",
+    "source_type": "postgresql"
+  },
+  "finance": {
+    "source_folder": "finance_s3",
+    "source_type": "s3",
+    "files": [
+      "SalesInvoice.csv",
+      "SalesInvoice_schema_drift.csv",
+      "SalesInvoiceLine.parquet",
+      "PurchaseInvoice.csv",
+      "PurchaseInvoiceLine.parquet",
+      "CashReceipt.csv",
+      "DisbursementPayment.csv",
+      "GLEntry.parquet"
+    ]
+  }
+}

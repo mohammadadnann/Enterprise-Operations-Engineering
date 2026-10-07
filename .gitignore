@@ -18,3 +18,8 @@ __pycache__/
 .env
 .venv/
 venv/
+
+# Airflow local runtime
+airflow/airflow.db
+airflow/airflow.cfg
+airflow/logs/
