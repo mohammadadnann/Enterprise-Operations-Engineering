@@ -23,3 +23,5 @@ venv/
 airflow/airflow.db
 airflow/airflow.cfg
 airflow/logs/
+# Local Parquet export used to bridge Databricks Silver tables to S3
+silver_export/

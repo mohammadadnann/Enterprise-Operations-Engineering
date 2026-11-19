@@ -1,0 +1,22 @@
+select
+    "SupplierID" as supplier_id,
+    "SupplierName" as supplier_name,
+    "ContactName" as contact_name,
+    "Address" as address,
+    "City" as city,
+    "State" as state,
+    "PostalCode" as postal_code,
+    "Country" as country,
+    "Phone" as phone,
+    "Email" as email,
+    "PaymentTerms" as payment_terms,
+    "IsApproved" as is_approved,
+    "TaxID" as tax_id,
+    "BankAccount" as bank_account,
+    "SupplierCategory" as supplier_category,
+    "SupplierRiskRating" as supplier_risk_rating,
+    "DefaultCurrency" as default_currency,
+    "_source_file" as source_file,
+    "_batch_id" as batch_id,
+    "_ingested_at" as ingested_at
+from {{ source('silver', 'supplier') }}

@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: fct_order_fulfillment
+    columns:
+      - name: sales_order_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_supplier_delivery_performance
+    columns:
+      - name: purchase_order_id
+        tests:
+          - unique
+          - not_null
+      - name: supplier_id
+        tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('stg_supplier')
+                field: supplier_id
+
+  - name: fct_revenue_invoice_reconciliation
+    columns:
+      - name: sales_invoice_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_customer_cash_position
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_inventory_health
+    columns:
+      - name: item_id
+        tests:
+          - unique
+          - not_null

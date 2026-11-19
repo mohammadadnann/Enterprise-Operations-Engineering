@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: silver
+    database: enterprise_operations
+    schema: silver
+    tables:
+      - name: cashreceipt
+      - name: customer
+      - name: demandforecast
+      - name: disbursementpayment
+      - name: glentry
+      - name: goodsreceipt
+      - name: goodsreceiptline
+      - name: inventorypolicy
+      - name: item
+      - name: materialissue
+      - name: materialissueline
+      - name: productioncompletion
+      - name: purchaseinvoice
+      - name: purchaseinvoiceline
+      - name: purchaseorder
+      - name: purchaseorderline
+      - name: salesinvoice
+      - name: salesinvoiceline
+      - name: salesorder
+      - name: salesorderline
+      - name: shipment
+      - name: shipmentline
+      - name: supplier
+      - name: workorder
+      - name: workorderoperation
